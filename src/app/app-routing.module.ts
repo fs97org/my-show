@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ComposeMessageComponent }  from './compose-message/compose-message.component';
 import { PageNotFoundComponent }    from './page-not-found/page-not-found.component';
+import { IndexComponent }    from './pages/index/index.component';
 
 import { AuthGuard }                          from './auth/auth.guard';
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
@@ -12,13 +13,14 @@ const appRoutes: Routes = [
     path: 'compose',
     component: ComposeMessageComponent,
     outlet: 'popup'
-  },
-  {
+  },{
+    path: 'index',
+    component: IndexComponent
+  },{
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule',
     canLoad: [AuthGuard]
-  },
-  {
+  },{
     path: 'crisis-center',
     loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule',
     data: { preload: true }
