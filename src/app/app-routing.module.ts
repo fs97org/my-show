@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComposeMessageComponent }  from './compose-message/compose-message.component';
 import { PageNotFoundComponent }    from './page-not-found/page-not-found.component';
 import { IndexComponent }    from './pages/index/index.component';
+import { ProInfoComponent }    from './pages/pro-info/pro-info.component';
 
 import { AuthGuard }                          from './auth/auth.guard';
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
@@ -16,6 +17,9 @@ const appRoutes: Routes = [
   },{
     path: 'index',
     component: IndexComponent
+  },{
+    path: 'pro_info.html',
+    component: ProInfoComponent
   },{
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule',

@@ -1,15 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <h1>
-    Welcome to {{ title }}
-  </h1>
-<li>  <a routerLink="/index" routerLinkActive="active">index</a></li>
-<li>  <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a></li>
-<li>  <a routerLink="/superheroes" routerLinkActive="active">Heroes</a></li>
-<li>  <a routerLink="/admin" routerLinkActive="active">Admin</a></li>
-<li>  <a routerLink="/login" routerLinkActive="active">Login</a></li>
-<li>  <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a></li>
 
-<div [@routeAnimation]="getAnimationData(routerOutlet)">
+<!-- <div [@routeAnimation]="getAnimationData(routerOutlet)"> -->
+<div >
   <router-outlet #routerOutlet="outlet"></router-outlet>
 </div>
 <router-outlet name="popup"></router-outlet>

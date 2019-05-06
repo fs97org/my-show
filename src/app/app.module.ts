@@ -13,13 +13,15 @@ import { AppRoutingModule }        from './app-routing.module';
 import { HeroesModule }            from './heroes/heroes.module';
 import { AuthModule }              from './auth/auth.module';
 import { IndexComponent } from './pages/index/index.component';
+import { ProInfoComponent } from './pages/pro-info/pro-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     ComposeMessageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProInfoComponent
   ],
   imports: [
     BrowserModule,
